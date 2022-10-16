@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LRAD013P.MainPage">
+
+    <StackLayout>
+        
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenido!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Entry x:Name="txtcodigo" Placeholder="Ingrese codigo" Keyboard="Text" />
+
+        <Entry x:Name="txtnombres" Placeholder="Ingrese nombre" Keyboard="Text" />
+        
+        <Entry x:Name="txtapellidos" Placeholder="Ingrese apellidos" Keyboard="Text" />
+
+        <Entry x:Name="txttelefono" Placeholder="Ingrese celular" Keyboard="Telephone" />
+
+        <Entry x:Name="txtcorreo" Placeholder="Ingrese email" Keyboard="Email" />
+
+        <Button x:Name="btnagregar" Text="Salvar" Clicked="btnagregar_Clicked" />
+
+        <Button x:Name="btnsegunda" Text="Ir a Pagina" Clicked="btnsegunda_Clicked" />
+
+    </StackLayout>
+
+</ContentPage>
