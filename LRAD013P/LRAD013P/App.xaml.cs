@@ -30,7 +30,7 @@ namespace LRAD013P
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.PagePrincipal());
+            MainPage = new NavigationPage(new Views.PageRAPrincipal());
         }
 
         protected override void OnStart()

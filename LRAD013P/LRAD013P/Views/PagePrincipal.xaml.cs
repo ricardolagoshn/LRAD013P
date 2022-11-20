@@ -34,5 +34,10 @@ namespace LRAD013P.Views
         {
 
         }
+
+        private async void toolmap_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.PageMap());
+        }
     }
 }
