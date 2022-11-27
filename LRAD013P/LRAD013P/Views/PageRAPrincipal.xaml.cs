@@ -27,9 +27,9 @@ namespace LRAD013P.Views
             await Controllers.AlumnController.getAlumnos();
         }
 
-        private void agregar_Clicked(object sender, EventArgs e)
+        private async void agregar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Views.PageAlumn());
         }
 
         private void toolupdate_Clicked(object sender, EventArgs e)

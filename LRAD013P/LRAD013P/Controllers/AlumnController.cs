@@ -5,6 +5,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
+
 namespace LRAD013P.Controllers
 {
     public static class AlumnController
@@ -38,6 +39,32 @@ namespace LRAD013P.Controllers
             }
 
             
+        }
+
+
+        public async static Task<int> CreateAlum(Models.Alumnos alum)
+        {
+            String JsonObject = JsonConvert.SerializeObject(alum);
+            StringContent contenido = new StringContent(JsonObject, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = null;
+
+            using (HttpClient client = new HttpClient())
+            {
+                response = await client.PostAsync(Configuracion.PostServiceList, contenido);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var resultado = response.Content.ReadAsStringAsync().Result;
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+
+
         }
 
     }
